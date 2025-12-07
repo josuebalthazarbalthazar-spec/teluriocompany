@@ -1,0 +1,184 @@
+/* ===== RESET & ESTILOS GLOBAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: rgb(2, 14, 27);
+    color: #222;
+    min-height: 100vh;
+}
+
+/* ===== HEADER ===== */
+header {
+    background: linear-gradient(90deg, #0a3e81 60%, #073e79 100%);
+    color: #0e0101;
+    box-shadow: 0 2px 8px rgba(13, 71, 161, 0.08);
+    padding: 16px 0;
+}
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== NAVEGAÇÃO ===== */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+      gap: 24px;
+}
+
+nav a {
+    color: #040114;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(90deg, #0d47a1 60%, #1976d2 100%);
+    color: #03071d;
+    box-shadow: 0 2px 8px rgba(13, 71, 161, 0.08);
+    text-align: center;
+    padding: 18px 0;
+    font-size: 1rem;
+    margin-top: 32px;
+    border-top: 2px solid #1976d2;
+}
+/* ===== PÁGINA DE CADASTRO ===== */
+.cadastro-center {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+}
+
+.form-container {
+    max-width: 480px;
+    width: 100%;
+    background: #030522;
+    border-radius: 14px;
+    box-shadow: 0 6px 32px rgba(25, 118, 210, 0.13);
+    padding: 36px 28px;
+}
+
+.form-container h2 {
+    color: #1976d2;
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-group {
+    margin-bottom: 18px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #0d47a1;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid #bbdefb;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #59819b;
+    font-family: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+    outline: none;
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ===== BOTÃO ===== */
+.btn-cadastrar {
+    width: 100%;
+    margin-top: 12px;
+    background: linear-gradient(90deg, #43ea7f 60%, #1de9b6 100%);
+    color: #6d6c7c;
+    font-weight: bold;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(67, 234, 127, 0.18);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-cadastrar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(67, 234, 127, 0.28);
+}
+
+.btn-cadastrar:active {
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 16px;
+    }
+
+    .form-container {
+        padding: 28px 20px;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem;
+    }
+   }
+
+@media (max-width: 480px) {
+    .header-flex {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        padding: 20px 16px;
+    }
+
+    .btn-cadastrar {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+} 

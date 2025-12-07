@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Entrar — Telúrio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="auth-page">
+        <header class="auth-header">
+            <div class="auth-logo" aria-hidden="true">
+                
+                <img src="imagens/logo.jpg.jfif" alt="Logo Telúrio">
+            </div>
+            <h1>Telúrio Company</h1>
+        </header>
+
+        <section class="auth-content">
+            <div class="auth-left">
+                <h2>Conecte-se com os próximos eventos</h2>
+                <p>Crie sua conta para receber convites, descontos e novidades dos nossos eventos.</p>
+            </div>
+
+            <div class="auth-card" id="authCard" aria-live="polite">
+                <nav class="auth-tabs" role="tablist">
+                    <button class="tab active" data-target="loginForm" role="tab" aria-selected="true">Entrar</button>
+                    <button class="tab" data-target="registerForm" role="tab" aria-selected="false">Criar conta</button>
+                </nav>
+
+                <form id="loginForm" class="auth-form">
+                    <label>
+                        Email ou telefone
+                        <input type="text" id="loginUser" required />
+                    </label>
+                    <label>
+                        Senha
+                        <input type="password" id="loginPass" required />
+                    </label>
+                    <button class="btn primary" id="loginBtn">Entrar</button>
+                    <a href="#" class="auth-link">Esqueceu a senha?</a>
+                </form>
+
+                <form id="registerForm" class="auth-form hidden">
+                    <label>
+                        Nome
+                        <input type="text" id="regFirstName" required />
+                    </label>
+                    <label>
+                        Sobrenome
+                        <input type="text" id="regLastName" required />
+                    </label>
+                    <label>
+                        Email
+                        <input type="email" id="regEmail" required />
+                    </label>
+                    <label>
+                        Número de telefone
+                        <input type="tel" id="regPhone" required />
+                    </label>
+                    <label>
+                        Senha (mín. 6)
+                        <input type="password" id="regPass" minlength="6" required />
+                    </label>
+                    <button class="btn primary" id="regBtn">Criar conta</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

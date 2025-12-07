@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Telúrio Company</title>
+
+    <!-- Fontes e Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin-login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <img src="imagens/logo.jpg.jfif" alt="Logo Telúrio Company" class="logo">
+                <h2>Acesso Restrito</h2>
+            </div>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminEmail">Email</label>
+                    <input type="email" id="adminEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Senha</label>
+                    <input type="password" id="adminPassword" required>
+                </div>
+                <p id="errorMessage" class="error-message"></p>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin-auth.js"></script>
+</body>
+</html>

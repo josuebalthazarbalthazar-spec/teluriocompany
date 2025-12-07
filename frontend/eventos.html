@@ -1,0 +1,309 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telúrio Company</title>
+
+    <!-- Fonte Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+    
+        <script src="js/search.js"></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <img src="imagens/logo.jpg.jfif" alt="Logo Telúrio Company" class="logo">
+                <h1>Telúrio Company</h1>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="cadastro.html">Cadastre Eventos</a></li>
+                    <li><a href="admin.html">Área do Adm</a></li>
+                    <li><a href="Login/Register.html">Login/Register</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger-button" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+    <!-- CARROSSEL DE IMAGENS -->
+<div class="carousel-container">
+    <div class="carousel">
+        <img src="imagens/logo.jpg.jfif" alt="Banner promocional de evento 1">
+        <img src="imagens/logo.jpg.jfif" alt="Banner promocional de evento 2">
+        <img src="imagens/logo.jpg.jfif" alt="Banner promocional de evento 3">
+    </div>
+</div>
+ <!-- SEÇÃO EVENTOS -->
+    <section id="eventos">
+        <h2 class="section-title">Nossos Eventos</h2>
+        
+        <!-- BARRA DE PESQUISA -->
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-input" 
+                placeholder="Pesquisar eventos por nome, data ou local..."
+                onkeyup="filtrarEventos()"
+            >
+            <button class="search-btn" onclick="filtrarEventos()"> Pesquisar</button>
+        </div>
+        <!-- Seção: Eventos em Destaque -->
+        <div class="featured-events">
+            <h3 class="subsection-title">Em Destaque</h3>
+            <div class="featured-container">
+                <article class="featured-card">
+                    <img src="imagens/92577b9a-5af1-46b4-9da8-d533bb91a0cf.jfif" alt="Conferencia Empresarial">
+                    <div class="featured-content">
+                        <h4>Conferência Empresarial</h4>
+                        <p>13/12/2025 • Mutamba</p>
+                        <button class="btn featured-cta" onclick="abrirModal()">Ver Detalhes</button>
+                    </div>
+                </article>
+                <article class="featured-card">
+                    <img src="imagens/corrocel1.png" alt="Concerto ao Vivo">
+                    <div class="featured-content">
+                        <h4>Concerto ao Vivo</h4>
+                        <p>08/01/2026 • Malanje</p>
+                        <button class="btn featured-cta" onclick="abrirModal()">Comprar Ingresso</button>
+                    </div>
+                </article>
+                <article class="featured-card">
+                    <img src="imagens/584373722_812545368278080_7907886388842471218_n.jpg" alt="Maratona de Startups">
+                    <div class="featured-content">
+                        <h4>Maratona de Startups</h4>
+                        <p>10/01/2026 • Centro de Convenções</p>
+                        <button class="btn featured-cta" onclick="abrirModal()">Inscrever Equipa</button>
+                    </div>
+                </article>
+                 </div>
+        </div>
+
+
+        <div class="cards-eventos" id="cardsContainer">
+<div class="cards-eventos">
+    <h3 class="subsection-title all-events-title">Todos os Eventos</h3>
+
+    <div class="card-evento">
+        <img src="imagens/92577b9a-5af1-46b4-9da8-d533bb91a0cf.jfif" alt="Workshop">
+        <h3>Conferencia Empresarial</h3>
+        <p>Você está convidado a participar da Conferência Empresarial de Inovação e Sucesso.</p>
+        <ul>
+            <li>Data: 13/12/2025</li>
+            <li>Local: Mutamba</li>
+            <li>Duração: 4h</li>
+            <li>Ingressos Limitados</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Comprar Ingresso</button>
+    </div>
+
+    <div class="card-evento">
+        <img src="imagens/corrocel1.png" alt="Festival">
+        <h3>Concerto ao Vivo</h3>
+        <p>Festival de Música.</p>
+        <ul>
+            <li>Data: 08/01/2026</li>
+            <li>Local: Piscina Diamante-Malanje</li>
+            <li>Ingressos Limitados</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Comprar Ingresso</button>
+    </div>
+
+    <div class="card-evento">
+        <img src="imagens/78.jpg.jfif" alt="gala de premiação"> 
+        <h3>Gala de Premiação - Malanje</h3>
+        <p>Música ao vivo.</p>
+        <ul>
+            <li>Data: 10/09/2025</li>
+            <li>Local: Mediateca Rei Ngola Kiluanji</li>
+            <li>Aberto ao público</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Comprar Ingresso</button>
+    </div>
+
+    <div class="card-evento">
+        <img src="imagens/565950312_790389963826954_2219097821718146674_n.jpg" alt="feira de Tecnologia">
+        <h3>Feira de Tecnologia</h3>
+        <p>Exposição de startups e workshops hands-on.</p>
+        <ul>
+            <li>Data: 13/10/2025</li>
+            <li>Local: Escola Nossa Senhora de Fátima</li>
+            <li>Entrada Gratuita (inscrição obrigatória)</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Comprar Ingresso</button>
+    </div>
+
+    <div class="card-evento">
+        <img src="imagens/IMG-20250921-WA0078.jpg" alt="Workshop de Fotografia">
+        <h3>Workshop de Fotografia</h3>
+        <p>Aprenda técnicas de captura e edição com profissionais.</p>
+        <ul>
+            <li>Data: 05/03/2025</li>
+            <li>Local: Estúdio Telúrio</li>
+            <li>Vagas Limitadas</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Comprar Ingresso</button>
+    </div>
+
+    <!-- Novos eventos adicionados -->
+    <div class="card-evento">
+        <img src="imagens/a8502b7f-1460-4609-8d84-740b14ce7a73.jfif"alt="Noite de Networking">
+        <h3>Noite de Networking</h3>
+        <p>Conexões entre profissionais e empresas locais.</p>
+        <ul>
+            <li>Data: 22/11/2025</li>
+            <li>Local: Espaço Colaborativo Telúrio</li>
+            <li>Credenciamento: 18:30</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Comprar Ingresso</button>
+    </div>
+
+    <div class="card-evento">
+        <img src="imagens/538634455_743739105158707_7924493116158018776_n.jpg"alt="">
+        <h3>Feira de Artes</h3>
+        <p>Mostra de artistas locais, exposições e oficinas.</p>
+        <ul>
+            <li>Data: 05/12/2025</li>
+            <li>Local: Praça Central</li>
+            <li>Entrada: Gratuita</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Mais Informações</button>
+    </div>
+
+    <div class="card-evento">
+        <img src="imagens/584373722_812545368278080_7907886388842471218_n.jpg" alt="Maratona">
+        <h3>Maratona de Startups</h3>
+        <p>Hackathon de 48h com premiação para as melhores ideias.</p>
+        <ul>
+            <li>Data: 10/01/2026</li>
+            <li>Local: Centro de Convenções</li>
+            <li>Inscrições até 02/01/2026</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Inscrever Equipa</button>
+    </div>
+
+    <!-- +3 eventos novos -->
+    <div class="card-evento">
+        <img src="imagens/577681531_805509878981629_8312508293815367818_n.jpg"alt="festa ">
+        <h3>Noite Gastronômica</h3>
+        <p>Degustação com chefs locais e música ao vivo.</p>
+        <ul>
+            <li>Data: 18/02/2026</li>
+            <li>Local: Largo da Feira</li>
+            <li>Ingressos: 150 AKZ</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Comprar Ingresso</button>
+    </div>
+
+    <div class="card-evento">
+        <img src="imagens/a1971b30-f293-4327-8582-63dae0eb7d8a.jfif"alt="">
+        <h3>Festival de Cinema</h3>
+        <p>Exibição de curtas e debates com realizadores.</p>
+        <ul>
+            <li>Data: 02/03/2026</li>
+            <li>Local: Cinema Central</li>
+            <li>Entrada: Gratuita (vagas limitadas)</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Reservar Lugar</button>
+    </div>
+
+    <div class="card-evento">
+        <img src="imagens/a8502b7f-1460-4609-8d84-740b14ce7a73.jfif"alt="curso de desenvolvimento web">
+        <h3>Curso de Desenvolvimento Web</h3>
+        <p>Formação intensiva em HTML, CSS e JavaScript.</p>
+        <ul>
+            <li>Data: 15/04/2026</li>
+            <li>Local: Laboratório Telúrio</li>
+            <li>Inscrições até 01/04/2026</li>
+        </ul>
+        <button class="btn" onclick="abrirModal()">Inscrever</button>
+    </div>
+
+</div>
+
+    <!-- botão WhatsApp flutuante --->
+    <a class="whatsapp-btn" href="https://wa.me/943415120" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
+        <!-- ícone SVG vetorial  -->
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+        </svg>
+        <span class="btn-text">WhatsApp</span>
+    </a>
+    <!-- MODAL DE COMPRA -->
+    <div class="modal-overlay" id="compraModal" aria-hidden="true">
+        <div class="modal-box">
+            <button class="modal-close" onclick="fecharModal()" aria-label="Fechar modal">&times;</button>
+            <h2 id="modalTitle">Comprar Ingresso</h2>
+            <div class="modal-content">
+                <form id="compraForm">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" value="1" min="1" oninput="calcularTotal()">
+                    
+                    <label for="tipoIngresso">Tipo de Ingresso:</label>
+                    <select id="tipoIngresso" name="tipoIngresso" onchange="calcularTotal()">
+                        <option value="1500">Normal - 1.500 AKZ</option>
+                        <option value="5000">VIP - 5.000 AKZ</option>
+                    </select>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="9xx xxx xxx" required>
+
+                    <div class="total" id="totalPreco">Total: 1.500 AKZ</div>
+
+                    <button type="submit" class="btn">Confirmar Compra</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Script para funcionalidade do menu hambúrguer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerButton = document.getElementById('hamburger-button');
+            const nav = document.getElementById('main-nav');
+ 
+            hamburgerButton.addEventListener('click', function() {
+                nav.classList.toggle('nav-active');
+            });
+        });
+
+        // Funções para controlar o modal de compra
+        const modal = document.getElementById('compraModal');
+
+        function abrirModal() {
+            modal.style.display = 'flex';
+            modal.setAttribute('aria-hidden', 'false');
+            calcularTotal(); // Calcula o total inicial ao abrir
+        }
+
+        function fecharModal() {
+            modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+        }
+
+        function calcularTotal() {
+            const quantidade = document.getElementById('quantidade').value;
+            const tipoIngresso = document.getElementById('tipoIngresso').value;
+            const total = quantidade * tipoIngresso;
+            document.getElementById('totalPreco').innerText = 'Total: ' + total.toLocaleString('pt-AO', { style: 'currency', currency: 'AOA' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Telúrio Company</title>
+
+    <!-- Fontes e Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <script>
+        // Protege a página: se o usuário não estiver logado, redireciona para o login.
+        if (sessionStorage.getItem('isAdminLoggedIn') !== 'true') {
+            window.location.href = 'admin-login.html';
+        }
+    </script>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo-section">
+                <img src="imagens/logo.jpg.jfif" alt="Logo Telúrio Company" class="logo">
+                <h1>Telúrio Company</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#eventos">Eventos</a></li>
+                    <li><a href="index.html#sobre">Sobre</a></li>
+                    <li><a href="cadastro.html">Cadastre Eventos</a></li>
+                    <li><a href="admin.html">Área do Adm</a></li>
+                    <!-- O botão de Sair substitui o Login/Register na área do admin -->
+                    <li><button id="logoutBtn" class="btn-logout">Sair</button></li>
+                </ul>
+            </nav>
+            <button class="hamburger" id="hamburger-button" aria-label="Abrir menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="admin-panel">
+        <div class="container">
+            <h2 class="admin-title">Painel Administrativo</h2>
+
+            <!-- Seção de Resumo -->
+            <section class="summary-cards">
+                <div class="summary-card">
+                    <h3>Total de Eventos</h3>
+                    <p>12</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Usuários</h3>
+                    <p>45</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Eventos Futuros</h3>
+                    <p>8</p>
+                </div>
+            </section>
+
+            <!-- Tabela de Gerenciamento de Eventos -->
+            <section class="event-management">
+                <h3>Gerenciar Eventos</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome do Evento</th>
+                                <th>Data</th>
+                                <th>Local</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Conferencia Empresarial</td>
+                                <td>13/12/2025</td>
+                                <td>Mutamba</td>
+                                <td class="actions">
+                                    <button class="btn-action edit">Editar</button>
+                                    <button class="btn-action delete">Excluir</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Concerto ao Vivo</td>
+                                <td>08/01/2026</td>
+                                <td>Piscina Diamante-Malanje</td>
+                                <td class="actions">
+                                    <button class="btn-action edit">Editar</button>
+                                    <button class="btn-action delete">Excluir</button>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td>Maratona de Startups</td>
+                                <td>10/01/2026</td>
+                                <td>Centro de Convenções</td>
+                                <td class="actions">
+                                    <button class="btn-action edit">Editar</button>
+                                    <button class="btn-action delete">Excluir</button>
+                                </td>
+                            </tr>
+                            <!-- Adicione mais linhas para outros eventos -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer id="contato">
+        <div class="footer-content">
+            <p>&copy; 2025 Telúrio Company — Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script>
+        // Lógica do botão de Sair
+        const logoutBtn = document.getElementById('logoutBtn');
+        if(logoutBtn) {
+            logoutBtn.addEventListener('click', () => {
+                sessionStorage.removeItem('isAdminLoggedIn');
+                window.location.href = 'admin-login.html';
+            });
+        }
+    </script>
+
+</body>
+</html>
